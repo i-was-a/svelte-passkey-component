@@ -1,0 +1,24 @@
+{
+  "package": {
+    "exports": {
+      ".": {
+        "types": "./index.d.ts",
+        "svelte": "./index.js",
+        "default": "./index.js"
+      },
+      "./server": {
+        "types": "./server/index.d.ts",
+        "default": "./server/index.js"
+      },
+      "./server/adapters": {
+        "types": "./server/adapters/types.d.ts",
+        "default": "./server/adapters/types.js"
+      }
+    },
+    "files": [
+      "**/*.js",
+      "**/*.d.ts",
+      "**/*.svelte"
+    ]
+  }
+}

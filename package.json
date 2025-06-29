@@ -1,0 +1,76 @@
+{
+    "name": "svelte-passkey-component",
+    "version": "0.1.0",
+    "description": "A reusable Svelte component library for passkey authentication, with framework-agnostic server-side helpers.",
+    "type": "module",
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "svelte": "./dist/index.js",
+            "default": "./dist/index.js"
+        },
+        "./server": {
+            "types": "./dist/server/index.d.ts",
+            "default": "./dist/server/index.js"
+        },
+        "./server/adapters": {
+            "types": "./dist/server/adapters/types.d.ts",
+            "default": "./dist/server/adapters/types.js"
+        }
+    },
+    "keywords": [
+        "svelte",
+        "passkey",
+        "webauthn",
+        "authentication",
+        "security",
+        "component",
+        "library"
+    ],
+    "author": "i-was-a",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/i-was-a/svelte-passkey-component.git"
+    },
+    "bugs": {
+        "url": "https://github.com/i-was-a/svelte-passkey-component/issues"
+    },
+    "homepage": "https://github.com/i-was-a/svelte-passkey-component#readme",
+    "scripts": {
+        "dev": "svelte-kit dev",
+        "build": "svelte-package",
+        "package": "svelte-package",
+        "prepublishOnly": "npm run build",
+        "check": "svelte-check --tsconfig ./tsconfig.json",
+        "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
+    },
+    "devDependencies": {
+        "@sveltejs/adapter-auto": "^3.1.1",
+        "@sveltejs/kit": "^2.5.0",
+        "@sveltejs/package": "^2.2.0",
+        "@sveltejs/vite-plugin-svelte": "^3.0.0",
+        "@types/node": "^24.0.7",
+        "svelte": "^4.2.7",
+        "svelte-check": "^3.6.0",
+        "tslib": "^2.4.1",
+        "typescript": "^5.0.0",
+        "vite": "^5.0.12"
+    },
+    "dependencies": {
+        "@simplewebauthn/browser": "^10.0.0",
+        "@simplewebauthn/server": "^13.1.1"
+    },
+    "peerDependencies": {
+        "svelte": "^4.0.0"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    }
+}
